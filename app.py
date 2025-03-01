@@ -83,7 +83,7 @@ if 'processing_done' not in st.session_state:
     st.session_state.processing_done = False
 
 # Main app UI
-st.title("🎬 Video Processing System")
+st.title("🎬 Frame Wise - Video Processing System")
 
 # Sidebar for app information
 with st.sidebar:
