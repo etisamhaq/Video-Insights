@@ -18,7 +18,7 @@ st.set_page_config(
 
 # Preconfigured settings
 WHISPER_MODEL_SIZE = "tiny"  # Using tiny model as requested
-GROQ_API_KEY = "your api key"  # Replace with your actual Groq API key
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
 # Set up the Whisper model
 @st.cache_resource
