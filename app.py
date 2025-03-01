@@ -15,22 +15,22 @@ st.set_page_config(
     layout="wide"
 )
 
-# # Set up FFmpeg path (to fix FileNotFoundError)
-# FFMPEG_PATH = "/app/.bin/ffmpeg"
+# Set up FFmpeg path (to fix FileNotFoundError)
+FFMPEG_PATH = "/app/.bin/ffmpeg"
 
-# if not os.path.exists(FFMPEG_PATH):
-#     st.warning("Downloading FFmpeg, please wait...")
-#     subprocess.run("mkdir -p /app/.bin && wget -q -O /app/.bin/ffmpeg https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-i686-static.tar.xz && tar -xf /app/.bin/ffmpeg-release-i686-static.tar.xz -C /app/.bin --strip-components=1", shell=True)
-#     subprocess.run("chmod +x /app/.bin/ffmpeg", shell=True)
+if not os.path.exists(FFMPEG_PATH):
+    st.warning("Downloading FFmpeg, please wait...")
+    subprocess.run("mkdir -p /app/.bin && wget -q -O /app/.bin/ffmpeg https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-i686-static.tar.xz && tar -xf /app/.bin/ffmpeg-release-i686-static.tar.xz -C /app/.bin --strip-components=1", shell=True)
+    subprocess.run("chmod +x /app/.bin/ffmpeg", shell=True)
 
-# # Add FFmpeg binary to system PATH
-# os.environ["PATH"] += os.pathsep + "/app/.bin"
+# Add FFmpeg binary to system PATH
+os.environ["PATH"] += os.pathsep + "/app/.bin"
 
-# # Function to extract audio from video using FFmpeg
-# def extract_audio(video_path, output_audio_path):
-#     command = f'{FFMPEG_PATH} -i "{video_path}" -q:a 0 -map a "{output_audio_path}" -y'
-#     subprocess.call(command, shell=True)
-#     return output_audio_path
+# Function to extract audio from video using FFmpeg
+def extract_audio(video_path, output_audio_path):
+    command = f'{FFMPEG_PATH} -i "{video_path}" -q:a 0 -map a "{output_audio_path}" -y'
+    subprocess.call(command, shell=True)
+    return output_audio_path
 
 
 # Preconfigured settings
@@ -49,18 +49,13 @@ def transcribe_audio(audio_path, whisper_model):
 
 # Function to extract audio from video
 
-def extract_audio(video_path, output_audio_path):
-    try:
-        (
-            ffmpeg
-            .input(video_path)
-            .output(output_audio_path, format="mp3", acodec="libmp3lame")
-            .run(overwrite_output=True, capture_stdout=True, capture_stderr=True)
-        )
-        return output_audio_path
-    except ffmpeg._run.Error as e:  # Fix: Use ffmpeg._run.Error
-        print(f"FFmpeg error: {e.stderr.decode()}")
-        return None
+# def extract_audio(video_path, output_audio_path):
+#     try:
+#         ffmpeg.input(video_path).output(output_audio_path, format="mp3", acodec="libmp3lame").run(overwrite_output=True)
+#         return output_audio_path
+#     except ffmpeg.Error as e:
+#         st.error(f"FFmpeg error: {e}")
+#         return None
 
 # Function to process LLM requests using Groq
 def process_with_llm(text, prompt, temperature=0.7):
