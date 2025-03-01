@@ -6,7 +6,6 @@ import whisper
 import json
 from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage, SystemMessage
-import ffmpeg
 
 # Set page configuration
 st.set_page_config(
@@ -51,9 +50,9 @@ def transcribe_audio(audio_path, whisper_model):
 
 def extract_audio(video_path, output_audio_path):
     try:
-        ffmpeg.input(video_path).output(output_audio_path, format="mp3").run()
+        ffmpeg.input(video_path).output(output_audio_path, format="mp3", acodec="libmp3lame").run(overwrite_output=True)
         return output_audio_path
-    except Exception as e:
+    except ffmpeg.Error as e:
         st.error(f"FFmpeg error: {e}")
         return None
 
