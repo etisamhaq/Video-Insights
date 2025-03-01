@@ -6,6 +6,7 @@ import whisper
 import json
 from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage, SystemMessage
+import ffmpeg
 
 # Set page configuration
 st.set_page_config(
