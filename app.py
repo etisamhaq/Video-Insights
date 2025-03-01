@@ -1,11 +1,28 @@
-import streamlit as st
 import os
-import tempfile
 import subprocess
+import streamlit as st
+import tempfile
 import whisper
 import json
 from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage, SystemMessage
+
+# Set up FFmpeg path (to fix FileNotFoundError)
+FFMPEG_PATH = "/app/.bin/ffmpeg"
+
+if not os.path.exists(FFMPEG_PATH):
+    st.warning("Downloading FFmpeg, please wait...")
+    subprocess.run("mkdir -p /app/.bin && wget -q -O /app/.bin/ffmpeg https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-i686-static.tar.xz && tar -xf /app/.bin/ffmpeg-release-i686-static.tar.xz -C /app/.bin --strip-components=1", shell=True)
+    subprocess.run("chmod +x /app/.bin/ffmpeg", shell=True)
+
+# Add FFmpeg binary to system PATH
+os.environ["PATH"] += os.pathsep + "/app/.bin"
+
+# Function to extract audio from video using FFmpeg
+def extract_audio(video_path, output_audio_path):
+    command = f'{FFMPEG_PATH} -i "{video_path}" -q:a 0 -map a "{output_audio_path}" -y'
+    subprocess.call(command, shell=True)
+    return output_audio_path
 
 
 # Set page configuration
