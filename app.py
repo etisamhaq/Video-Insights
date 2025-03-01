@@ -51,10 +51,15 @@ def transcribe_audio(audio_path, whisper_model):
 
 def extract_audio(video_path, output_audio_path):
     try:
-        ffmpeg.input(video_path).output(output_audio_path, format="mp3", acodec="libmp3lame").run(overwrite_output=True)
+        (
+            ffmpeg
+            .input(video_path)
+            .output(output_audio_path, format="mp3", acodec="libmp3lame")
+            .run(overwrite_output=True, capture_stdout=True, capture_stderr=True)
+        )
         return output_audio_path
-    except ffmpeg.Error as e:
-        st.error(f"FFmpeg error: {e}")
+    except ffmpeg._run.Error as e:  # Fix: Use ffmpeg._run.Error
+        print(f"FFmpeg error: {e.stderr.decode()}")
         return None
 
 # Function to process LLM requests using Groq
