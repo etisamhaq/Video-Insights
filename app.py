@@ -6,6 +6,14 @@ import whisper
 import json
 from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage, SystemMessage
+import ffmpeg
+
+# Set page configuration
+st.set_page_config(
+    page_title="Video Processing System",
+    page_icon="🎬",
+    layout="wide"
+)
 
 # Set up FFmpeg path (to fix FileNotFoundError)
 FFMPEG_PATH = "/app/.bin/ffmpeg"
@@ -25,13 +33,6 @@ def extract_audio(video_path, output_audio_path):
     return output_audio_path
 
 
-# Set page configuration
-st.set_page_config(
-    page_title="Video Processing System",
-    page_icon="🎬",
-    layout="wide"
-)
-
 # Preconfigured settings
 WHISPER_MODEL_SIZE = "tiny"  # Using tiny model as requested
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
@@ -47,10 +48,14 @@ def transcribe_audio(audio_path, whisper_model):
     return result["text"]
 
 # Function to extract audio from video
+
 def extract_audio(video_path, output_audio_path):
-    command = f'ffmpeg -i "{video_path}" -q:a 0 -map a "{output_audio_path}" -y'
-    subprocess.call(command, shell=True)
-    return output_audio_path
+    try:
+        ffmpeg.input(video_path).output(output_audio_path, format="mp3", acodec="libmp3lame").run(overwrite_output=True)
+        return output_audio_path
+    except ffmpeg.Error as e:
+        st.error(f"FFmpeg error: {e}")
+        return None
 
 # Function to process LLM requests using Groq
 def process_with_llm(text, prompt, temperature=0.7):
