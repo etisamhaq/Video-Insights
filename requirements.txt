@@ -1,1 +1,3 @@
 openai-whisper
+langchain
+langchain-groq
