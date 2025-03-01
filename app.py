@@ -2,7 +2,6 @@ import streamlit as st
 import os
 import tempfile
 import subprocess
-import torch
 import whisper
 import json
 from langchain_groq import ChatGroq
