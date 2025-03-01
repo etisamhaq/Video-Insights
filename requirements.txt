@@ -2,3 +2,4 @@ openai-whisper
 langchain
 langchain-groq
 ffmpeg-python
+ffmpeg
