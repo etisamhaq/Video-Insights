@@ -1,5 +1,47 @@
-### Video Processing App  
+# 🎥 Video Transcription & Analysis App  
 
-This Streamlit-based application enables users to upload videos or provide local paths for transcription and analysis. It utilizes OpenAI’s Whisper for audio-to-text conversion and integrates LLMs via LangChain for summarization, key points extraction, and interactive chat. The interface is cleanly organized with tabs, progress indicators, and error handling for a seamless user experience.
+This **Application** enables users to **upload videos or provide local paths** for transcription and analysis.  
+It utilizes **OpenAI’s Whisper** for **audio-to-text conversion** and integrates **LangChain** for:  
+
+✅ **Summarization**  
+✅ **Key Points Extraction**  
+✅ **Interactive Chat**  
+✅ **Question Generation & Evaluation**  
+
+The app evaluates user responses, determines correctness, and provides **correct answers with explanations**.  
+It features **progress indicators**, **error handling**, and a clean **tab-based UI** for a seamless experience.  
+
+---
+
+## ✨ Features  
+
+🔹 **Upload or Provide Local Video Paths** – Process videos effortlessly.  
+🔹 **Whisper-Based Transcription** – Convert speech to text with high accuracy.  
+🔹 **Summarization & Key Points Extraction** – Get concise insights from video content.  
+🔹 **Interactive Chat** – Engage in AI-powered discussions about the video.  
+🔹 **Question Generation & Evaluation** – Automatically generate questions and assess user responses.  
+🔹 **Correct Answer & Explanation** – Provide the right answer along with an explanation if the response is incorrect.  
+🔹 **Progress Indicators & Error Handling** – Ensures a smooth user experience.  
+
+---
+
+## 🏗️ Tech Stack  
+
+| Technology  | Purpose |
+|------------|---------|
+| **Python**  | Core programming language |
+| **Streamlit** | Web interface |
+| **OpenAI Whisper** | Audio transcription |
+| **LangChain** | LLM-based summarization, Q&A, and chat |
+| **Groq API & Llama model** | Used for chat and analysis |
+
+---
+
+## 🚀 Installation & Usage  
+
+### 1️⃣ Clone the Repository  
+```bash
+git clone https://github.com/etisamhaq/Video-Insights
+cd Video-Insights
 
 ![pic](https://github.com/etisamhaq/Video-Insights/blob/main/pic1.jpg)
