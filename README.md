@@ -8,6 +8,8 @@ It utilizes **OpenAI’s Whisper** for **audio-to-text conversion** and integrat
 ✅ **Interactive Chat**  
 ✅ **Question Generation & Evaluation**  
 
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/pic1.jpg)
+
 The app evaluates user responses, determines correctness, and provides **correct answers with explanations**.  
 It features **progress indicators**, **error handling**, and a clean **tab-based UI** for a seamless experience.  
 
@@ -43,5 +45,3 @@ It features **progress indicators**, **error handling**, and a clean **tab-based
 ```bash
 git clone https://github.com/etisamhaq/Video-Insights
 cd Video-Insights
-
-![pic](https://github.com/etisamhaq/Video-Insights/blob/main/pic1.jpg)
