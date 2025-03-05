@@ -57,4 +57,3 @@ streamlit run app.py
 ### 4️⃣ Upload or Provide a Video Path
 🔹 Upload a video file or enter a local file path.
 🔹 The app will transcribe, analyze, and generate questions.
-```
