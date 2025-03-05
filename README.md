@@ -45,3 +45,15 @@ It features **progress indicators**, **error handling**, and a clean **tab-based
 ```bash
 git clone https://github.com/etisamhaq/Video-Insights
 cd Video-Insights
+
+### 2️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+
+### 3️⃣ Run the Application
+```bash
+streamlit run app.py
+
+### 4️⃣ Upload or Provide a Video Path
+🔹 Upload a video file or enter a local file path.
+🔹 The app will transcribe, analyze, and generate questions.
