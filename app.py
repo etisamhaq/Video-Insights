@@ -98,17 +98,18 @@ with st.sidebar:
     st.markdown("""
     This application allows you to:
     1. Upload a video or provide a local path
-    2. Transcribe the audio using Whisper (tiny model)
-    3. Process the transcription with Groq LLM for:
+    2. Transcribe the audio using Whisper
+    3. Process the transcription with LLM for:
        - Summarization
        - Key points extraction
        - Interactive chat
+       - Assessment with multiple choice questions (MCQs)
+       - Generate study material based on incorrect answers
+       - Track your progress through different levels
+                
     """)
     
     st.markdown("---")
-    st.markdown(f"**Model Configuration:**")
-    st.markdown(f"- Whisper: {WHISPER_MODEL_SIZE}")
-    st.markdown(f"- LLM: Groq (llama3-70b-8192)")
 
 # Main content area
 tab1, tab2, tab3, tab4 = st.tabs(["Upload & Process", "Analysis", "Chat", "Assessment"])
@@ -513,4 +514,4 @@ with tab4:
 
 # Footer
 st.markdown("---")
-st.markdown("Video Processing System | Powered by Whisper and Groq LLM")
+st.markdown("Video Processing System | Powered by Whisper and LLM")
