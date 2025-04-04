@@ -81,6 +81,15 @@ if 'transcription' not in st.session_state:
     st.session_state.transcription = ""
 if 'processing_done' not in st.session_state:
     st.session_state.processing_done = False
+if 'current_level' not in st.session_state:
+    st.session_state.current_level = 1
+if 'levels_completed' not in st.session_state:
+    st.session_state.levels_completed = []
+if 'level_scores' not in st.session_state:
+    st.session_state.level_scores = {}
+if 'combined_content' not in st.session_state:
+    st.session_state.combined_content = ""
+
 
 # Main app UI
 st.title("🎬 Frame Wise - Video Processing System")
