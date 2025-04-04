@@ -87,8 +87,6 @@ if 'levels_completed' not in st.session_state:
     st.session_state.levels_completed = []
 if 'level_scores' not in st.session_state:
     st.session_state.level_scores = {}
-if 'combined_content' not in st.session_state:
-    st.session_state.combined_content = ""
 
 
 # Main app UI
@@ -281,7 +279,7 @@ with tab4:
                 Focus on making the content easy to understand and remember.
                 """
                 
-                study_material = process_with_llm(st.session_state.combined_content, study_prompt, temperature=0.3, context=None)
+                study_material = process_with_llm(st.session_state.transcription, study_prompt, temperature=0.3, context=None)
                 
                 return {
                     'wrong_answers': wrong_answers,
@@ -349,7 +347,7 @@ with tab4:
                             """
                             
                             try:
-                                response = process_with_llm(st.session_state.combined_content, prompt, temperature=0.7)
+                                response = process_with_llm(st.session_state.transcription, prompt, temperature=0.7)
                                 response = response.strip()
                                 if not response.startswith('['):
                                     start = response.find('[')
@@ -447,7 +445,7 @@ with tab4:
                                     Focus on making the content easy to understand and remember.
                                     """
                                     
-                                    study_material = process_with_llm(st.session_state.combined_content, study_prompt, temperature=0.3, context=None)
+                                    study_material = process_with_llm(st.session_state.transcription, study_prompt, temperature=0.3, context=None)
                                     
                                     # Display study material
                                     st.subheader("📚 Study Material")
