@@ -109,7 +109,6 @@ with st.sidebar:
                 
     """)
     
-    st.markdown("---")
 
 # Main content area
 tab1, tab2, tab3, tab4 = st.tabs(["Upload & Process", "Analysis", "Chat", "Assessment"])
