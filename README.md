@@ -8,8 +8,6 @@ It utilizes **OpenAI’s Whisper** for **audio-to-text conversion** and integrat
 ✅ **Interactive Chat**  
 ✅ **Question Generation & Evaluation**  
 
-![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p2.png)
-
 The app evaluates user responses, determines correctness, and provides **correct answers with explanations**.  
 It features **progress indicators**, **error handling**, and a clean **tab-based UI** for a seamless experience.  
 
@@ -27,11 +25,13 @@ It features **progress indicators**, **error handling**, and a clean **tab-based
 🔹 **Interactive Chat** – Engage in AI-powered discussions about the video.  
 ![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p10.png)
 🔹 **Question Generation & Evaluation** – Automatically generate questions and assess user responses.  
-![pic](https://github.com/etisamhaq/Video-Insights/blob/main/pic1.jpg)
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p5.png)
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p6.png)
 🔹 **Correct Answer & Explanation** – Provide the right answer along with an explanation if the response is incorrect.  
-![pic](https://github.com/etisamhaq/Video-Insights/blob/main/pic1.jpg)
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p11.png)
 🔹 **Progress Indicators & Error Handling** – Ensures a smooth user experience.  
-![pic](https://github.com/etisamhaq/Video-Insights/blob/main/pic1.jpg)
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p7.png)
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p8.png)
 
 ---
 
