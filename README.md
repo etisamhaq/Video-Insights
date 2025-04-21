@@ -1,4 +1,4 @@
-# 🎥 Video Transcription & Analysis App  
+<img width="958" alt="image" src="https://github.com/user-attachments/assets/db927f2f-ed80-4aba-b8f7-305772636f39" /># 🎥 Video Transcription & Analysis App  
 
 This **Application** enables users to **upload videos or provide local paths** for transcription and analysis.  
 It utilizes **OpenAI’s Whisper** for **audio-to-text conversion** and integrates **LangChain** for:  
@@ -8,7 +8,7 @@ It utilizes **OpenAI’s Whisper** for **audio-to-text conversion** and integrat
 ✅ **Interactive Chat**  
 ✅ **Question Generation & Evaluation**  
 
-![pic](https://github.com/etisamhaq/Video-Insights/blob/main/pic1.jpg)
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p2.png)
 
 The app evaluates user responses, determines correctness, and provides **correct answers with explanations**.  
 It features **progress indicators**, **error handling**, and a clean **tab-based UI** for a seamless experience.  
@@ -18,12 +18,20 @@ It features **progress indicators**, **error handling**, and a clean **tab-based
 ## ✨ Features  
 
 🔹 **Upload or Provide Local Video Paths** – Process videos effortlessly.  
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p1.png)
 🔹 **Whisper-Based Transcription** – Convert speech to text with high accuracy.  
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p9.png)
 🔹 **Summarization & Key Points Extraction** – Get concise insights from video content.  
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p3.png)
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p4.png)
 🔹 **Interactive Chat** – Engage in AI-powered discussions about the video.  
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/p10.png)
 🔹 **Question Generation & Evaluation** – Automatically generate questions and assess user responses.  
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/pic1.jpg)
 🔹 **Correct Answer & Explanation** – Provide the right answer along with an explanation if the response is incorrect.  
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/pic1.jpg)
 🔹 **Progress Indicators & Error Handling** – Ensures a smooth user experience.  
+![pic](https://github.com/etisamhaq/Video-Insights/blob/main/pic1.jpg)
 
 ---
 
