@@ -1,4 +1,4 @@
-<img width="958" alt="image" src="https://github.com/user-attachments/assets/db927f2f-ed80-4aba-b8f7-305772636f39" /># 🎥 Video Transcription & Analysis App  
+# 🎥 Video Transcription & Analysis App  
 
 This **Application** enables users to **upload videos or provide local paths** for transcription and analysis.  
 It utilizes **OpenAI’s Whisper** for **audio-to-text conversion** and integrates **LangChain** for:  
